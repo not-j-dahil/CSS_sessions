@@ -1,6 +1,25 @@
 body {
-    background-color: honeydew;
+    background-image: url("images/SP_logo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #666;
+    /* The order
+    background-image: url(photo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: #ccc;
+    */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    background-color: rgba(230, 230, 250, 0.5);
 }
 
 h1 {
@@ -8,8 +27,9 @@ h1 {
 }
 
 h2 {
-    background-color: aquamarine;
-    color: rgba(72, 145, 120, 1);
+    background-color: rgba(127, 255, 212, 0.5);
+    border: 10px solid rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.7);
     padding: 10px;
 }
 
@@ -77,4 +97,13 @@ div.colors ul {
 
 div.colors li {
     display: inline-block;
+}
+
+div.table {
+    width: 100%;
+    display: table;
+}
+
+div.table div {
+    display: table-cell;
 }
