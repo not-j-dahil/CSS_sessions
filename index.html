@@ -23,6 +23,7 @@
             <li><a href="#res">Length and Width</a></li>
             <li><a href="#positions">Positions</a></li>
             <li><a href="#overflow">Overflow</a></li>
+            <li><a href="#float">Float and Clear</a></li>
         </ul>
     </div>
 
@@ -104,7 +105,7 @@
                 <b>position: relative;</b><br>Similar to margin but can overlap over elements, according to the previous element (not parent element/container)
                 <br>Leaves a 'ghost' (gap) where it's meant to be.<br>No element (position: static) can overlap it.
             </div>
-            <div class="pos" style="position: absolute; left: 350px; top: 20px;">
+            <div class="pos" style="position: absolute; right: 350px; top: 20px;">
                 <b>position: absolute;</b><br>Fixed relative to the Parent container.<br>Parent container MUST be 'position: relative' for it to work.
             </div>
             <div class="pos" style="position: fixed; bottom: 20px; right: 20px;">
@@ -123,7 +124,7 @@
 
         </div>
 
-        <h2 id="overflow">Overflow!</h2>
+        <h2 id="overflow">Overflow! <sub>(with fixed height)</sub></h2>
 
         <div style="width: 100%; position: relative; ">
             <div class="overflow" style="overflow: visible;">
@@ -147,6 +148,46 @@
                 facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
             </div>
         </div>
+
+        <h2 id="float">Float and Clear</h2>
+
+        <div style="padding: 10px; border: 10px solid darkolivegreen; margin: 10px; background-color: rgba(85, 107, 47, 0.5);">
+            <img src="images/SP_logo.png" alt="sp_logo" width="100px" style="float: left; margin: 10px;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
+                Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...</p>
+
+            <img src="images/SP_logo.png" alt="sp_logo" width="100px" style="float: right; margin: 10px;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
+                Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...</p>
+        </div>
+        <div style="margin: 10px; padding: 10px; border: 10px solid darkred; overflow: auto; background-color: rgba(139, 0, 0, 0.5);">
+            <img src="images/SP_logo.png" alt="sp_logo" width="100px" style="float: left; margin: 10px;">
+            <p>overflow: auto - Fix images that goes over borders; make image fit to div.
+                <br>Can also use 'display: fit-content;'
+                <br>OR (in .css)
+            </p>
+            <pre>.clearfix::after{
+   content: "";
+                    clear: both;
+                    display: table;
+                 }
+                             </pre>
+        </div>
+        <div>
+            <h3>Flexible boxes!</h3>
+            <div style="display: flex; flex-wrap: nowrap; padding: 10px;">
+                <div style="width: 50%; padding: 10px; outline: 5px solid dodgerblue; line-height: 30px;">
+                    Box 1 - This is some text to make sure that the content gets really tall. This is some text to make sure that the content gets really tall.
+                </div>
+                <div style="width: 50%; padding: 10px; outline: 5px solid dodgerblue;">
+                    Box 2 - My height will follow Box 1.
+                </div>
+            </div>
+        </div>
+
+
+
+
 
 
     </main>
