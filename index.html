@@ -21,6 +21,7 @@
             <li><a href="#margins">Margins</a></li>
             <li><a href="#paddings">Paddings</a></li>
             <li><a href="#res">Length and Width</a></li>
+            <li><a href="#positions">Positions</a></li>
         </ul>
     </div>
 
@@ -90,12 +91,36 @@
         <p style="box-sizing: border-box; padding: 20px; width: 300px; margin: 5px auto; background-color: rgb(211, 135, 110); text-align: center;">use box-sizing to keep width</p>
 
         <h2 id="res">Length and Width!</h2>
-        <p style="max-width: 800px; height: 100px; margin: 10px; padding: 5px; background-color: powderblue;">max-width: 800px<br>This div will resize when window gets smaller! Try to resize, this paragraph will resize as well when the width of the window is shorter than the paragraph!</p>
-        <p style="min-width: 800px; height: 100px; margin: 10px; padding: 5px; background-color: powderblue;">min-width: 800px<br>This div will only resize to the minimum width. Meaning, a horizontal scoll will appear if the div is wider than the window. Pretty cool ey!</p>
+        <p style="max-width: 700px; height: 100px; margin: 10px; padding: 5px; background-color: powderblue;">max-width: 700px<br>This div will resize when window gets smaller! Try to resize, this paragraph will resize as well when the width of the window is shorter than the paragraph!</p>
+        <p style="min-width: 700px; height: 100px; margin: 10px; padding: 5px; background-color: powderblue;">min-width: 700px<br>This div will only resize to the minimum width. Meaning, a horizontal scoll will appear if the div is wider than the window. Pretty cool ey!</p>
+
+        <h2 id="positions">Positions!</h2>
+        <div style="border: 3px solid black; position: relative; padding: 10px; height: fit-content;">
+            <div class="pos" style="position: static;">
+                <b>position: static;</b><br>This is default
+            </div>
+            <div class="pos" style="position: relative; left: 30px; bottom: 20px;">
+                <b>position: relative;</b><br>Similar to margin but can overlap over elements, according to the previous element (not parent element/container)
+                <br>Leaves a 'ghost' (gap) where it's meant to be.<br>No element (position: static) can overlap it.
+            </div>
+            <div class="pos" style="position: absolute; left: 350px; top: 20px;">
+                <b>position: absolute;</b><br>Fixed relative to the Parent container.<br>Parent container MUST be 'position: relative' for it to work.
+            </div>
+            <div class="pos" style="position: fixed; bottom: 20px; right: 20px;">
+                <b>position: fixed;</b><br>Fixed relative to the VIEWPORT.
+            </div>
+            <div class="pos" style="position: sticky; bottom: 20px; top: 20px; margin: 0 auto;">
+                <b>position: sticky;</b><br>Will stick to the viewport (within the parent container) if not where it's meant to be.
+            </div>
+
+            <p style="margin: 100px 30px; text-align: justify; letter-spacing: 5px; line-height: 50px;">Some text to enable scrolling..<br> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec
+                et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus. Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius
+                te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
 
 
+            <img src="images/SP_logo.png" alt="sp_logo" width="300px" style="position: absolute; z-index: -1; left: 0; right: 0; top: 50%; margin: 0 auto;">
 
-
+        </div>
 
     </main>
 
